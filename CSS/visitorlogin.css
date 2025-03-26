@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #10217d; /* Darker shade for navbar */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important; /* White text for navbar */
+}
+
+.nav-link:hover {
+    color: #89dee2 !important; /* Light blue on hover */
+}
+
+/* Container Styles */
+.container {
+    margin-top: 50px;
+    max-width: 600px; /* Set a max width for the container */
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+}
+
+/* Card Styles */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* Add padding for better spacing */
+}
+
+.card-body {
+    padding: 20px; /* Inner padding for card body */
+}
+
+/* Heading Styles */
+h2 {
+    color: #10217d; /* Dark blue for headings */
+    text-align: center; /* Center align title */
+    font-size: 2rem; /* Increase font size for better visibility */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+}
+
+.form-control {
+    border: 1px solid #527c88; /* Border color */
+    border-radius: 5px;
+    padding: 12px; /* Increased padding for better usability */
+    font-size: 1rem; /* Adjust font size */
+}
+
+.form-control:focus {
+    border-color: #16c2d5; /* Focus border color */
+    box-shadow: 0 0 5px rgba(22, 194, 213, 0.5);
+}
+
+/* Button Styles */
+.btn {
+    background-color: #16c2d5; /* Main color for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px; /* Adjust padding for larger buttons */
+    font-size: 1.1rem; /* Slightly larger font size */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #89dee2; /* Light blue on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #10217d; /* Dark blue for footer */
+    color: white;
+    padding: 20px 0;
+    position: relative; /* Ensure footer is positioned correctly */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px; /* Reduce margin on smaller screens */
+    }
+
+    .card {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .btn {
+        padding: 10px; /* Adjust button padding */
+    }
+}

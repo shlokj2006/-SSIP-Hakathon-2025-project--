@@ -1,0 +1,54 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #10217d !important;
+}
+
+.nav-link {
+    color: #10217d !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #0a1a5e !important;
+}
+
+.container {
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.login-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.user-selection {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    background-color: #0a1a5e !important;
+    color: white !important;
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 15px 0;
+    color: #333;
+    font-size: 14px;
+}

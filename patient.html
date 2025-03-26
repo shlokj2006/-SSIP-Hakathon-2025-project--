@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - Jagrut Seva Kendra</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/patient.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Jagrut Seva Kendra</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#appointments">Appointments</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reports">Reports</a></li>
+                <li class="nav-item"><a class="nav-link" href="#health-stats">Health Stats</a></li>
+                <li class="nav-item"><a class="nav-link text-danger" href="login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container mt-4">
+        <div class="card shadow p-4">
+            <h2 class="text-center">Welcome, <span id="patientName">Rohit Sharma</span></h2>
+            <p class="text-center">Your healthcare records and appointments at your fingertips.</p>
+        </div>
+        
+        <div id="appointments" class="mt-5">
+            <h3>Upcoming Appointments</h3>
+            <ul class="list-group" id="appointmentList">
+                <li class="list-group-item">Doctor: Dr. Anjali Verma | Date: 28 March 2025 | Time: 10:30 AM</li>
+                <li class="list-group-item">Doctor: Dr. Suresh Iyer | Date: 2 April 2025 | Time: 3:00 PM</li>
+            </ul>
+        </div>
+        
+        <div id="reports" class="mt-5">
+            <h3>Medical Reports</h3>
+            <ul class="list-group" id="reportList">
+                <li class="list-group-item">Blood Test - 15 March 2025 <a href="#" class="btn btn-sm btn-primary">Download</a></li>
+                <li class="list-group-item">X-Ray Chest - 20 March 2025 <a href="#" class="btn btn-sm btn-primary">Download</a></li>
+            </ul>
+        </div>
+        
+        <div id="health-stats" class="mt-5">
+            <h3>Health Statistics</h3>
+            <canvas id="healthChart"></canvas>
+        </div>
+    </div>
+    
+    <script src="Script/patient.js"></script>
+</body>
+</html>
