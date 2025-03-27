@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             window.open('patient.html');
         } else if (userType === "Staff" && username === "staff" && password === "admin123") {
             alert("Welcome, Staff! Redirecting...");
-            window.location.href = "staff.html";
+            window.location.href = "staff.html";//change
         } else {
             alert("Invalid credentials! Please try again.");
         }
