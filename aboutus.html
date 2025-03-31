@@ -1,71 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/tailwind.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Jagrut Seva Kendra</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/about.css">
     <style>
         body {
-            font-family: "Poppins", sans-serif;
-        }
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.navbar {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section {
+    padding: 40px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-weight: 700;
+    color: #10217d;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 18px;
+    color: #555;
+}
+
+.img-fluid {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 16px;
+    padding: 5px 0;
+    position: relative;
+}
+
+ul li::before {
+    content: '\2713';
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    background: #10217d;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
     </style>
 </head>
 <body>
-    <header>
-        <nav class="bg-white shadow-lg fixed w-full z-10">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="flex justify-between">
-                    <div class="flex space-x-7">
-                        <div>
-                            <a href="#" class="flex items-center py-4 px-2">
-                                <i class="fas fa-hospital text-blue-500 text-2xl mr-2"></i>
-                                <span class="font-semibold text-gray-500 text-lg">Jagrut Seva Kendra</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="hidden md:flex items-center space-x-1">
-                        <a href="#home" class="py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold">Home</a>
-                        <a href="#"
-                            class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Services</a>
-                        <a href="#"
-                            class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">About</a>
-                        <a href="login.html"
-                            class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Login</a>
-                        <a href="visitorlogin.html"
-                            class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Visitor</a>
-                        <a href="#"
-                            class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Gallery</a>
-                        
-                    <div class="md:hidden flex items-center">
-                        <button class="outline-none mobile-menu-button">
-                            <i class="fas fa-bars text-gray-500 text-xl"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-<div>
-    <h1>Jagrut Seva Kendra</h1>
-    <h2>Our Mission</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sapiente nihil pariatur illo ipsa laborum perspiciatis animi quos, inventore cupiditate nemo excepturi provident nobis maiores quam perferendis enim sint amet?</p>
-    <p></p>
-    <h2>Our services</h2>
-    <p></p>
-    <p></p>
-    <h2>Our Team</h2>
-    <p></p>
-    <p></p>
-</div>
-    
-    <footer>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Jagrut Seva Kendra</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="homepage.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="homepage.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <section class="about-section container mt-5">
+        <div class="text-center">
+            <h2 class="text-primary">About Jagrut Seva Kendra</h2>
+            <p class="lead">Providing Quality Healthcare Services with Compassion</p>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="images/hospital.jpg" alt="Hospital" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <p>Jagrut Seva Kendra is dedicated to offering top-quality medical services to patients across India. With a team of experienced doctors and state-of-the-art facilities, we strive to ensure the best care and treatment for all individuals.</p>
+                <ul>
+                    <li>24/7 Emergency Services</li>
+                    <li>Advanced Medical Technology</li>
+                    <li>Experienced and Compassionate Staff</li>
+                    <li>Multi-specialty Departments</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2025 Jagrut Seva Kendra. All rights reserved.</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,182 @@
+/* Resetting basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #10217d;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #f8f9fa !important;
+    font-weight: bold;
+}
+
+/* Visitor Dashboard Heading */
+h2 {
+    font-size: 2.5rem;
+    color: #10217d;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Card Styles for Patient Details and Navigation */
+.card {
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    font-size: 1.8rem;
+    color: #10217d;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.card .btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Styling for the patient details input */
+#patientSearch {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Chatbox styling */
+#chatbox {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#chatbox p {
+    margin-bottom: 10px;
+}
+
+#chatbox p strong {
+    color: #10217d;
+}
+
+/* Input field for the chatbot */
+#chatInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Instructions section */
+#instructions {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#instructions h4 {
+    font-size: 1.6rem;
+    color: #10217d;
+    font-weight: bold;
+}
+
+#instructions ul {
+    list-style-type: none;
+}
+
+#instructions li {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #patientSearch {
+        font-size: 1rem;
+    }
+
+    .card h4 {
+        font-size: 1.6rem;
+    }
+
+    #chatInput, #patientSearch {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    .card h4 {
+        font-size: 1.4rem;
+    }
+
+    #chatInput, #patientSearch {
+        font-size: 0.9rem;
+    }
+}

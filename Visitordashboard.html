@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Dashboard - Jagrut Seva Kendra</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="CSS/visitordashboard.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="homepage.html">Jagrut Seva Kendra</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="homepage.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link active" href="visitordashboard.html">Visitor Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="homepage.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center text-primary">Visitor Dashboard</h2>
+        
+        <div class="row mt-4">
+            <!-- Patient Details Section -->
+            <div class="col-md-6">
+                <div class="card shadow p-4">
+                    <h4>Patient Details</h4>
+                    <p><strong>Name:</strong> Rajesh Kumar</p>
+                    <p><strong>Room No:</strong> 205</p>
+                    <p><strong>Admission Date:</strong> 25th March 2025</p>
+                    <p><strong>Discharge Date:</strong> 5th April 2025</p>
+                    <p><strong>Next Appointment:</strong> 10th April 2025</p>
+                </div>
+            </div>
+            
+            <!-- Navigation & Chatbot Section -->
+            <div class="col-md-6">
+                <div class="card shadow p-4">
+                    <h4>Smart Navigation</h4>
+                    <p>Find the fastest route to the patient’s room using our smart map.</p>
+                    <a href="smart_map.html" class="btn btn-primary">Open Smart Map</a>
+                </div>
+                <div class="card shadow p-4 mt-3">
+                    <h4>Chatbot Assistance</h4>
+                    <div id="chatbox" class="chatbox border p-3">
+                        <p><strong>Bot:</strong> How can I assist you?</p>
+                    </div>
+                    <input type="text" id="chatInput" class="form-control mt-2" placeholder="Type a message...">
+                    <button class="btn btn-success mt-2" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 mt-5">
+        <p>&copy; 2025 Jagrut Seva Kendra. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Script/visitordashboard.js"></script>
+</body>
+</html>
