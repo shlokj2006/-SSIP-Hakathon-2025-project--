@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: #007bff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Mobile Menu */
+.mobile-menu-button {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Services Section */
+.services {
+    margin-top: 80px;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.services h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.service-box {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.service-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #007bff;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
