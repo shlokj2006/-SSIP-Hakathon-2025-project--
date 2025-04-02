@@ -3,81 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Visitor Dashboard - Jagrut Seva Kendra</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/tailwind.min.css">
-    <link rel="stylesheet" href="css/visitorlogin.css">
+    <title>Visitor Login - Jagrut Seva Kendra</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/visitorlogin.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Jagrut Seva Kendra</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link active" href="visitor_dashboard.html">Visitor Dashboard</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container mt-5">
-        <h2 class="text-center text-primary">Enhanced Visitor Dashboard</h2>
-        <div class="row mt-4">
-            <!-- Patient Details Section -->
-            <div class="col-md-6">
-                <div class="card shadow p-4">
-                    <h4>Patient Details</h4>
-                    <input type="text" id="patientSearch" class="form-control" placeholder="Search by Patient ID..." />
-                    <div id="patientDetails">
-                        <p><strong>Name:</strong> Rajesh Kumar</p>
-                        <p><strong>Room No:</strong> 205</p>
-                        <p><strong>Admission Date:</strong> 25th March 2025</p>
-                        <p><strong>Discharge Date:</strong> 5th April 2025</p>
-                        <p><strong>Next Appointment:</strong> 10th April 2025</p>
-                    </div>
-                    <div id="noPatientMessage" class="d-none">
-                        <p class="text-danger">Patient not found. Please try again.</p>
-                    </div>
-                </div>
+    <div class="login-container">
+        <h2>Visitor Login</h2>
+        <form id="visitorLoginForm">
+            <div class="mb-3">
+                <label for="visitorName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="visitorName" placeholder="Enter your name" required>
             </div>
-
-            <!-- Navigation & Chatbot Section -->
-            <div class="col-md-6">
-                <div class="card shadow p-4">
-                    <h4>Smart Navigation</h4>
-                    <p>Find the fastest route to the patient’s room using our smart map.</p>
-                    <a href="smart_map.html" class="btn btn-primary">Open Smart Map</a>
-                </div>
-                <div class="card shadow p-4 mt-3">
-                    <h4>Chatbot Assistance</h4>
-                    <div id="chatbox" class="chatbox border p-3">
-                        <p><strong>Bot:</strong> How can I assist you?</p>
-                    </div>
-                    <input type="text" id="chatInput" class="form-control mt-2" placeholder="Type a message...">
-                    <button class="btn btn-success mt-2" onclick="sendMessage()">Send</button>
-                </div>
+            <div class="mb-3">
+                <label for="patientId" class="form-label">Patient ID</label>
+                <input type="text" class="form-control" id="patientId" placeholder="Enter patient ID" required>
             </div>
-        </div>
-        <div id="instructions" class="mt-5 p-4 bg-light rounded shadow">
-            <h4>Instructions:</h4>
-            <ul>
-                <li>Enter Patient ID to view details</li>
-                <li>Click on 'Open Smart Map' for navigation</li>
-                <li>Use the Chatbot for assistance</li>
-            </ul>
-        </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Proceed to Visitor Dashboard</button>
+            <a href="#" class="forgot-password">Forgot Patient ID?</a>
+        </form>
     </div>
+    <script>
+     document.getElementById('visitorLoginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission behavior
 
-    <footer class="text-center py-4 mt-5">
-        <p>&copy; 2025 Jagrut Seva Kendra. All rights reserved.</p>
-    </footer>
+    let visitorName = document.getElementById('visitorName').value.trim();
+    let patientId = document.getElementById('patientId').value.trim();
+    let phone = document.getElementById('phone').value.trim();
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/visitor_dashboard.js"></script>
+    if (visitorName === "" || patientId === "" || phone === "") {
+        alert("⚠️ Please fill out all fields correctly.");
+        return;
+    }
+
+    // Store visitor details in local storage (optional for use in the dashboard)
+    localStorage.setItem("visitorName", visitorName);
+    localStorage.setItem("patientId", patientId);
+    localStorage.setItem("phone", phone);
+
+    // Redirect to the Visitor Dashboard page
+    window.location.href = "Visitordashboard.html";
+});
+
+
+    </script>
 </body>
 </html>
